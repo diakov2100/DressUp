@@ -9,7 +9,7 @@ Underflow
 __decimal_context__
 BasicContext
 DivisionByZero
-ROUND_FLOOR
+setcontext
 Subnormal
 HAVE_THREADS
 DefaultContext
@@ -19,7 +19,7 @@ DivisionImpossible
 MAX_PREC
 DecimalException
 InvalidContext
-ROUND_DOWN
+Overflow
 local
 Rounded
 ROUND_05UP
@@ -32,14 +32,14 @@ ROUND_CEILING
 MIN_EMIN
 ROUND_HALF_UP
 sys
-setcontext
+ROUND_FLOOR
 localcontext
 DecimalTuple
 ROUND_HALF_EVEN
 InvalidOperation
 ROUND_UP
 Inexact
-Overflow
+ROUND_DOWN
 __version__
 ImportError
 getcontext

@@ -6,8 +6,8 @@ default_int_handler
 pthread_sigmask
 int
 SIG_DFL
+SIGTERM
 CTRL_C_EVENT
-SIGSEGV
 SIGFPE
 SIGBREAK
 sigwait
@@ -25,7 +25,7 @@ SIGABRT
 _int_to_enum
 SIG_IGN
 set
-SIGTERM
+SIGSEGV
 getsignal
 CTRL_BREAK_EVENT
 Handlers

@@ -1,4 +1,4 @@
-start
+get_tracemalloc_memory
 get_traceback_limit
 _format_size
 Traceback
@@ -21,7 +21,7 @@ super
 Frame
 get_traced_memory
 abs
-get_tracemalloc_memory
+start
 Filter
 type
 fnmatch
