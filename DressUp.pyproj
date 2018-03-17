@@ -18,6 +18,7 @@
     <Name>DressUp</Name>
     <RootNamespace>DressUp</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <WebBrowserPort>5000</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +42,8 @@
     <Folder Include="DressUp\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="dress-up - Web Deploy.pubxml" />
+    <None Include="DressUp20180317051752 - Web Deploy.pubxml" />
     <Content Include="requirements.txt" />
     <Content Include="DressUp\static\content\bootstrap.css" />
     <Content Include="DressUp\static\content\bootstrap.min.css" />
