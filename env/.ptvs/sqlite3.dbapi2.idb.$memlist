@@ -29,7 +29,7 @@ version_info
 Binary
 OperationalError
 adapt
-DateFromTicks
+SQLITE_DROP_TABLE
 SQLITE_CREATE_VIEW
 SQLITE_ANALYZE
 SQLITE_CREATE_TRIGGER
@@ -68,7 +68,7 @@ PrepareProtocol
 SQLITE_CREATE_TEMP_TABLE
 SQLITE_INSERT
 Row
-SQLITE_DROP_TABLE
+DateFromTicks
 SQLITE_REINDEX
 ProgrammingError
 Error

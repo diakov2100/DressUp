@@ -30,7 +30,7 @@ dump
 Binary
 OperationalError
 adapt
-SQLITE_CREATE_VIEW
+DateFromTicks
 SQLITE_DROP_TABLE
 SQLITE_ANALYZE
 SQLITE_CREATE_TRIGGER
@@ -54,8 +54,8 @@ SQLITE_SELECT
 TimestampFromTicks
 register_adapters_and_converters
 SQLITE_DROP_TRIGGER
-paramstyle
 SQLITE_ALTER_TABLE
+paramstyle
 Time
 SQLITE_DROP_VIEW
 SQLITE_CREATE_TEMP_INDEX
@@ -66,7 +66,7 @@ PrepareProtocol
 SQLITE_CREATE_TEMP_TABLE
 SQLITE_INSERT
 Row
-DateFromTicks
+SQLITE_CREATE_VIEW
 SQLITE_REINDEX
 ProgrammingError
 Error

@@ -1,10 +1,10 @@
-PID_CREATE_DTM
+PID_LASTAUTHOR
 range
 MSIError
 PID_CODEPAGE
 MSICOLINFO_NAMES
 sequence
-_Unspecified
+PID_CREATE_DTM
 add_data
 isinstance
 MSIMODIFY_VALIDATE_DELETE
@@ -29,7 +29,7 @@ make_id
 MSIMODIFY_INSERT_TEMPORARY
 os
 AMD64
-MSIDBOPEN_DIRECT
+re
 Binary
 PID_WORDCOUNT
 text
@@ -42,7 +42,7 @@ MSIMODIFY_INSERT
 current_feature
 getattr
 PID_TEMPLATE
-MSIDBOPEN_CREATEDIRECT
+PID_LASTPRINTED
 type_localizable
 MSIMODIFY_MERGE
 knownbits
@@ -53,7 +53,7 @@ _directories
 Table
 type_key
 PID_APPNAME
-PID_LASTAUTHOR
+_Unspecified
 string
 add_tables
 MSIMODIFY_UPDATE
@@ -80,7 +80,7 @@ ValueError
 schema
 print
 OSError
-re
+MSIDBOPEN_DIRECT
 CreateRecord
 gen_uuid
 MSIDBOPEN_READONLY
@@ -92,5 +92,5 @@ MSIMODIFY_DELETE
 PID_SECURITY
 MSIMODIFY_VALIDATE
 TypeError
-PID_LASTPRINTED
+MSIDBOPEN_CREATEDIRECT
 type_string
