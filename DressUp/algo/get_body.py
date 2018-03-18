@@ -1,4 +1,4 @@
-"""
+﻿"""
 Description: Extract body of person without head and backdround
 """
 import cv2
@@ -8,6 +8,7 @@ from PIL import Image
 import face_recognition
 
 def get_body(img):
+    """
     image = face_recognition.load_image_file(img)
     face_locations = face_recognition.face_locations(image)
 
@@ -34,6 +35,8 @@ def get_body(img):
 
     #resize
     im = Image.open("withoutface.png")
+    """
+    im = Image.open(img)
     nx, ny = im.size
     im2 = im.resize((int(nx * 0.2), int(ny * 0.2)), Image.BICUBIC)
     im2.save("test-lowres.png", dpi=(1,1))
@@ -66,5 +69,4 @@ def get_body(img):
     final = background + img1
 
     os.remove("test-lowres.png")
-    os.remove("withoutface.png")
     return final
