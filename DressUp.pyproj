@@ -29,12 +29,25 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DressUp\algo\compare_colors.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DressUp\algo\get_body.py" />
+    <Compile Include="DressUp\algo\get_comon.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DressUp\algo\get_outfit.py" />
+    <Compile Include="DressUp\algo\__init__.py" />
     <Compile Include="runserver.py" />
     <Compile Include="DressUp\__init__.py" />
     <Compile Include="DressUp\views.py" />
+    <Compile Include="wsgi.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DressUp\" />
+    <Folder Include="DressUp\algo\" />
     <Folder Include="DressUp\static\" />
     <Folder Include="DressUp\static\content\" />
     <Folder Include="DressUp\static\fonts\" />
