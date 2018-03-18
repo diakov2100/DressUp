@@ -1,4 +1,4 @@
-"""
+﻿"""
 Description: Extract body of person without head and backdround
 """
 import cv2
@@ -69,5 +69,4 @@ def get_body(img):
     final = background + img1
 
     os.remove("test-lowres.png")
-    os.remove("withoutface.png")
     return final
