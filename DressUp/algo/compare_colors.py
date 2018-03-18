@@ -122,7 +122,6 @@ def compare(set1, set2, set3, colors):
                     x=_to_lab(set_color)
                     y=_to_lab(color['value'])
                     s+=delta_e_cmc(x, y) + delta_e_cie2000(x, y)
-                    print(s);
                 if s<len(colors)*210:
                     return True;
         return False;

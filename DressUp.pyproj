@@ -40,6 +40,9 @@
     <Compile Include="DressUp\algo\resize_cut.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DressUp\algo\server.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DressUp\algo\__init__.py" />
     <Compile Include="runserver.py" />
     <Compile Include="DressUp\__init__.py" />
