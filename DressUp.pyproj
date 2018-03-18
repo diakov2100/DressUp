@@ -17,7 +17,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>DressUp</Name>
     <RootNamespace>DressUp</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
     <WebBrowserPort>5000</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -37,6 +37,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DressUp\algo\get_outfit.py" />
+    <Compile Include="DressUp\algo\resize_cut.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DressUp\algo\__init__.py" />
     <Compile Include="runserver.py" />
     <Compile Include="DressUp\__init__.py" />
@@ -86,10 +89,10 @@
     <Content Include="DressUp\templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="env\">
-      <Id>env</Id>
+    <Interpreter Include="env1\">
+      <Id>env1</Id>
       <Version>3.6</Version>
-      <Description>env (Python 3.6 (64-bit))</Description>
+      <Description>env1 (Python 3.6 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
