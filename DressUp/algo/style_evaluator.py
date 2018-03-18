@@ -8,8 +8,8 @@ from __future__ import print_function
 import os
 import sys
 import numpy as np
-#from DressUp.algo.siamese_net import contrastive_loss
-from siamese_net import contrastive_loss
+from DressUp.algo.siamese_net import contrastive_loss
+#from siamese_net import contrastive_loss
 from keras.preprocessing.image import img_to_array, load_img
 from keras.applications.vgg16 import preprocess_input, VGG16
 from keras.models import Sequential, load_model

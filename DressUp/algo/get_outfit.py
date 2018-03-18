@@ -1,8 +1,8 @@
 """
 Description: Create an outfit consisting of two items - bottom (pants/skirt) and top
 """
-#from DressUp.algo.style_evaluator import evaluate_pure
-from style_evaluator import evaluate_pure
+from DressUp.algo.style_evaluator import evaluate_pure
+#from style_evaluator import evaluate_pure
 
 TYPES = ['shoes', 'top', 'bottom']
 

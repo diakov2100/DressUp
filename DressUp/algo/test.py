@@ -7,10 +7,10 @@ import numpy as np
 from keras.preprocessing.image import img_to_array, load_img
 import time
 
-#from DressUp.algo.get_outfit import get_outfit
+from DressUp.algo.get_outfit import get_outfit
+from DressUp.algo.style_evaluator import load_and_preprocess_image
+#from get_outfit import get_outfit
 #from style_evaluator import load_and_preprocess_image
-from get_outfit import get_outfit
-from style_evaluator import load_and_preprocess_image
 
 WORKING_DIR = os.path.dirname(__file__)
 IMAGES_DIR = os.path.join(WORKING_DIR, 'example_images')
