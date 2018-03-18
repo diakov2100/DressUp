@@ -36,7 +36,7 @@ def get_body(img):
     #resize
     im = Image.open("withoutface.png")
     """
-    im = img
+    im = Image.open(img)
     nx, ny = im.size
     im2 = im.resize((int(nx * 0.2), int(ny * 0.2)), Image.BICUBIC)
     im2.save("test-lowres.png", dpi=(1,1))
