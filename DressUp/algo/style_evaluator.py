@@ -8,12 +8,13 @@ from __future__ import print_function
 import os
 import sys
 import numpy as np
-from DressUp.algo.siamese_net import contrastive_loss
-#from siamese_net import contrastive_loss
+#from DressUp.algo.siamese_net import contrastive_loss
+from siamese_net import contrastive_loss
 from keras.preprocessing.image import img_to_array, load_img
 from keras.applications.vgg16 import preprocess_input, VGG16
 from keras.models import Sequential, load_model
 from keras.layers import Input, Flatten
+import urllib, cStringIO
 
 #Load trained model and value for rescaling
 WORKING_DIR = os.path.dirname(__file__)
@@ -25,11 +26,22 @@ EXAMPLES_DIR = os.path.join(WORKING_DIR, 'example_images')
 PATH_1 = os.path.join(EXAMPLES_DIR, 'shirt-1.jpg')
 PATH_2 = os.path.join(EXAMPLES_DIR, 'matching_2.jpg')
 
-def load_and_preprocess_image(path):
-    img = load_img(path, target_size=(224, 224))
+def load_and_preprocess_image(path_or_image):
+    img = load_img(path_or_image, target_size=(224, 224))
     img = preprocess_image(img)
     img = push_through_vgg(img) / max_value
     return img
+
+def load_and_preprocess_image_from_url(url):
+    try:
+        img = cStringIO.StringIO(urllib.urlopen(url).read())
+        img = load_and_preprocess_image(img)
+    except:
+        print('This is not a valid url or image.')
+        print('url:', url)
+        sys.exit(1)
+    img = cStringIO.StringIO(urllib.urlopen(url).read())
+    return load_and_preprocess_image(img)
 
 def preprocess_image(img):
     img = img_to_array(img)
