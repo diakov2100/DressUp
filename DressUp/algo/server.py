@@ -1,12 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Mar 18 06:28:02 2018
-
-@author: dyako
-"""
 import os
 from PIL import Image
-import json
 import numpy as np
 from keras.preprocessing.image import img_to_array, load_img
 import time
@@ -14,6 +7,7 @@ import cPickle
 
 from get_outfit import get_outfit
 from style_evaluator import load_and_preprocess_image
+from style_evaluator import load_and_preprocess_image_from_url
 
 from flask import Flask, request
 
@@ -31,9 +25,9 @@ DESCRIPTION = os.path.join(IMAGES_DIR, 'desc.json')
 
 PREPROCESSED_FILE = os.path.join(WORKING_DIR, 'preprocessed_clothes_test.pickle')
 CENTRAL_ITEM = os.path.join(IMAGES_DIR, 'matching_2.jpg')
- 
+
 def search_item(id1):
-    
+
     if db['accessory'].find_one({'id' : id1}) is not None:
         return db['accessory'].find_one({'id' : id1})
     if db['body'].find_one({'id' : id1}) is not None:
@@ -51,7 +45,7 @@ def search_item(id1):
 def get_style():
     type = request.args.get('type')
     img = request.args.get('img')
-    collection = db[type]
+    print(type, img)
     '''
     for raw in collection.find():
         if raw.images.uri == img:
@@ -60,8 +54,8 @@ def get_style():
     with open(PREPROCESSED_FILE, 'rb') as pickleFile:
         clothes = cPickle.load(pickleFile)
     central_item = {
-                'features': load_and_preprocess_image(img),
-                'type': type
+                'features': load_and_preprocess_image_from_url(img),
+                'type': 'shoes'
     }
     outfit = get_outfit(central_item, clothes)
     res=[]
@@ -69,6 +63,7 @@ def get_style():
     res.append({'price': raw['price'], 'images': raw['images'], 'name': raw['name'], 'type': raw['type'],  'source':raw['source']})
     raw=search_item(outfit[1]);
     res.append({'price': raw['price'], 'images': raw['images'], 'name': raw['name'], 'type': raw['type'],  'source':raw['source']})
-    return json.dump(res)
-    
+    print(res)
+    return json.dumb(res, io)
+
 app.run(host='0.0.0.0')
